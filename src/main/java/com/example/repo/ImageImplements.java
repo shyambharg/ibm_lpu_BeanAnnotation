@@ -45,6 +45,21 @@ public class ImageImplements implements ImageInterface {
 		jdbcTemplate.update(sql,img.getImageId(),img.getImageUrl());
 		return img;
 	}
+	public void updateImage(String imageUrl,String imageNewUrl)
+	{
+		String sql = "update image set imageUrl = ? where imageUrl = ?";
+		jdbcTemplate.update(sql,imageNewUrl,imageUrl);
+		System.out.println("updated");
+		
+	}
+	public void deleteImage(String imageUrl)
+	{
+		String sql = "delete from image where imageUrl = ?";
+		jdbcTemplate.update(sql,imageUrl);
+		System.out.println("deleted");
+	}
+	
+	
 }
 
 

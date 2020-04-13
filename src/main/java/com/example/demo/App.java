@@ -22,5 +22,8 @@ public class App
     	img.setImageId(UUID.randomUUID().toString());
     	img.setImageUrl("instagram");
     	System.out.println(imgInterface.createImageService(img));
+    	
+    	imgInterface.updateImageService("instagram", "instagram.com");
+    	imgInterface.delete("facebook");
     }
 }

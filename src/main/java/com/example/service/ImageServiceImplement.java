@@ -16,4 +16,12 @@ public class ImageServiceImplement implements ImageService{
 		return imageInterface.createImage(img);
 	}
 
+	public void updateImageService(String imageUrl, String imageNewUrl) {
+		imageInterface.updateImage(imageUrl, imageNewUrl);
+	}
+
+	public void delete(String imageUrl) {
+		imageInterface.deleteImage(imageUrl);
+	}
+
 }
