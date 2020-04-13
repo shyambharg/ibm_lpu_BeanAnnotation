@@ -5,8 +5,6 @@ import java.util.UUID;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.example.bean.Image;
-import com.example.repo.ImageImplements;
-import com.example.repo.ImageInterface;
 import com.example.service.ImageService;
 import com.example.service.ImageServiceImplement;
 
