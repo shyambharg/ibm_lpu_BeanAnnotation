@@ -27,7 +27,7 @@ public class App
     	int choice = 0;
     	Image img = ctx.getBean("image",Image.class);
     	
-    	while(choice!=5)
+    	while(choice!=6)
     	{
 
     		System.out.println("1 -> Add \n2 -> Update \n3 -> Delete \n4 -> Display");
@@ -69,6 +69,11 @@ public class App
     			}
     			break;
     		case 5:
+    			System.out.println("Enter the imageUrl to be displayed");
+    			String str = sc.next();
+    			System.out.println(imgInterface.displayByUrlService(str));
+    			break;    			
+    		case 6:
     			System.exit(0);
     			System.out.println("bye");
     			break;

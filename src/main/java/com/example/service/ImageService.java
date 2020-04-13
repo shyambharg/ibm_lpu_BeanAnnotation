@@ -13,5 +13,7 @@ public interface ImageService {
 	public void delete(String imageUrl);
 	
 	public List<Image> displayImageService();
+	
+	public Image displayByUrlService(String imageUrl);
 
 }

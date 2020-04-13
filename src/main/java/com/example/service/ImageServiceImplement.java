@@ -30,4 +30,8 @@ public class ImageServiceImplement implements ImageService{
 		return imageInterface.displayAll();
 	}
 
+	public Image displayByUrlService(String imageUrl) {
+		return imageInterface.displayByUrl(imageUrl);
+	}
+
 }

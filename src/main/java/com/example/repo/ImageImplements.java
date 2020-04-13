@@ -66,6 +66,10 @@ public class ImageImplements implements ImageInterface {
 		List<Image> imgs= jdbcTemplate.query(sql, new ImageMapper());
 		return imgs;
 	}
+	public Image displayByUrl(String imageUrl) {
+		String sql = "select * from image where imageUrl=?";
+		return jdbcTemplate.queryForObject(sql, new Object [] {imageUrl},new ImageMapper());
+	}
 	
 	
 }

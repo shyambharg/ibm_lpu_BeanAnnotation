@@ -14,4 +14,6 @@ public interface ImageInterface {
 	public void deleteImage(String imageUrl);
 	
 	public List<Image> displayAll();
+	
+	public Image displayByUrl(String imageUrl);
 }
