@@ -1,5 +1,7 @@
 package com.example.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,10 @@ public class ImageServiceImplement implements ImageService{
 
 	public void delete(String imageUrl) {
 		imageInterface.deleteImage(imageUrl);
+	}
+
+	public List<Image> displayImageService() {
+		return imageInterface.displayAll();
 	}
 
 }

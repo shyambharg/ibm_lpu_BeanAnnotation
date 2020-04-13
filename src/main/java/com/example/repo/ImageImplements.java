@@ -2,6 +2,7 @@ package com.example.repo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,6 +13,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.example.bean.Image;
+import com.example.mapper.ImageMapper;
 
 @Repository
 public class ImageImplements implements ImageInterface {
@@ -57,6 +59,12 @@ public class ImageImplements implements ImageInterface {
 		String sql = "delete from image where imageUrl = ?";
 		jdbcTemplate.update(sql,imageUrl);
 		System.out.println("deleted");
+	}
+	public List<Image> displayAll() {
+		
+		String sql = "select * from image";
+		List<Image> imgs= jdbcTemplate.query(sql, new ImageMapper());
+		return imgs;
 	}
 	
 	

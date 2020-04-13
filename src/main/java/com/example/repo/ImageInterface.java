@@ -1,5 +1,7 @@
 package com.example.repo;
 
+import java.util.List;
+
 import com.example.bean.Image;
 
 public interface ImageInterface {
@@ -10,4 +12,6 @@ public interface ImageInterface {
 	public void updateImage(String url,String newUrl);
 	
 	public void deleteImage(String imageUrl);
+	
+	public List<Image> displayAll();
 }
